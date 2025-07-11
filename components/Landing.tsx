@@ -85,7 +85,7 @@ const Landing = () => {
           </div>
         </div>
 
-        <div className="bg-slate-900 rounded-lg p-6 shadow-2xl font-mono text-sm text-slate-700">
+        <div className="bg-slate-900 rounded-lg p-6 shadow-2xl text-sm text-slate-700">
           <p className="mb-2 text-slate-400">// Terminal</p>
           <div className="bg-slate-800 text-slate-200 p-4 rounded-md min-h-[140px] whitespace-pre-wrap">
             {lines.map((line, idx) => (
