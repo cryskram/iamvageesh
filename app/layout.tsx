@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Montserrat } from "next/font/google";
+import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
 
-const montserrat = Montserrat({ subsets: ["latin"] });
+const mainFont = Space_Grotesk({ subsets: ["latin"], weight: ["400"] });
 
 export const metadata: Metadata = {
   title: "Vageesh G N",
@@ -16,7 +16,11 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className} antialiased`}>{children}</body>
+      <body
+        className={`${mainFont.className} antialiased bg-slate-200 text-slate-900`}
+      >
+        {children}
+      </body>
     </html>
   );
 }
