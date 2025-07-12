@@ -1,4 +1,7 @@
+"use client";
+
 import { JSX } from "react";
+import { motion } from "framer-motion";
 import { FaJava, FaWindows } from "react-icons/fa6";
 import {
   SiReact,
@@ -54,24 +57,31 @@ const techIcons: Record<string, JSX.Element> = {
 
 const TechStack = () => {
   return (
-    <div className="space-y-6 w-full">
-      <div className="space-y-6">
-        {Object.entries(stack).map(([category, tools]) => (
-          <div key={category} className="space-y-2">
-            <h4 className="text-base font-medium">{category}</h4>
-            <div className="flex flex-wrap gap-3">
-              {tools.map((tech) => (
-                <span
-                  key={tech}
-                  className="px-4 py-2 rounded-full text-sm  bg-slate-900 text-slate-100 flex items-center"
-                >
-                  {techIcons[tech]} {tech}
-                </span>
-              ))}
-            </div>
+    <div className="space-y-8 w-full">
+      {Object.entries(stack).map(([category, tools], index) => (
+        <motion.div
+          key={category}
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: index * 0.1 }}
+          viewport={{ once: true }}
+          className="space-y-3"
+        >
+          <h4 className="text-base font-semibold text-slate-700 tracking-wide">
+            {category}
+          </h4>
+          <div className="flex flex-wrap gap-3">
+            {tools.map((tech) => (
+              <span
+                key={tech}
+                className="px-4 py-2 rounded-full text-sm font-mono bg-slate-900 text-slate-100 flex items-center"
+              >
+                {techIcons[tech]} {tech}
+              </span>
+            ))}
           </div>
-        ))}
-      </div>
+        </motion.div>
+      ))}
     </div>
   );
 };

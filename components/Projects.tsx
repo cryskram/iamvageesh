@@ -1,5 +1,8 @@
+"use client";
+
 import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -85,7 +88,7 @@ const projects = [
     description: "A hackernews aggregator for a codejam.",
     tech: ["Next.js", "Tailwind", "Django", "Python", "Full Stack"],
     github: "https://github.com/cryskram/cyberspider",
-    demo: "https://cyberspider.vercel.app/",
+    demo: "https://cyberspiders.vercel.app/",
     image: "/projects/cyberspider.png",
   },
   {
@@ -93,6 +96,7 @@ const projects = [
     description: "A Discord bot generator with a few prompts.",
     tech: ["Javascript", "Discord Bot", "Package", "NPM"],
     github: "https://github.com/Discogen/discogen",
+    demo: "https://www.npmjs.com/package/discogen",
     image: "/projects/discogenImg.png",
   },
   {
@@ -104,21 +108,43 @@ const projects = [
   },
 ];
 
+const fadeUp = {
+  initial: { opacity: 0, y: 30 },
+  animate: { opacity: 1, y: 0 },
+};
+
 const Projects = () => {
   return (
     <div
       id="projects"
       className="w-full py-20 px-6 flex justify-center text-slate-800"
     >
-      <div className="max-w-6xl w-full space-y-12">
-        <h2 className="text-3xl md:text-4xl font-semibold text-center">
+      <motion.div
+        className="max-w-6xl w-full space-y-12"
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <motion.h2
+          className="text-3xl md:text-4xl font-semibold text-center"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+        >
           Projects
-        </h2>
+        </motion.h2>
+
         <div className="grid gap-8 md:grid-cols-3">
           {projects.map((project, idx) => (
-            <div
+            <motion.div
               key={idx}
-              className="bg-white border border-slate-200 rounded-xl shadow-xl  overflow-hidden flex flex-col"
+              variants={fadeUp}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: idx * 0.1 }}
+              className="bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"
             >
               {project.image && (
                 <Image
@@ -168,10 +194,10 @@ const Projects = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
