@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Space_Grotesk } from "next/font/google";
 import "./globals.css";
+import Footer from "@/components/Footer";
 
 const mainFont = Space_Grotesk({ subsets: ["latin"], weight: ["400"] });
 
@@ -20,6 +21,7 @@ export default function RootLayout({
         className={`${mainFont.className} antialiased bg-slate-200 text-slate-900`}
       >
         {children}
+        <Footer />
       </body>
     </html>
   );
