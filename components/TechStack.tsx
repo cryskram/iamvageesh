@@ -55,7 +55,6 @@ const techIcons: Record<string, JSX.Element> = {
 const TechStack = () => {
   return (
     <div className="space-y-6 w-full">
-      <h3 className="text-xl font-semibold text-slate-700">Tech Stack</h3>
       <div className="space-y-6">
         {Object.entries(stack).map(([category, tools]) => (
           <div key={category} className="space-y-2">
