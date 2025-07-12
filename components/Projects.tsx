@@ -106,7 +106,7 @@ const projects = [
 
 const Projects = () => {
   return (
-    <section
+    <div
       id="projects"
       className="w-full py-20 px-6 flex justify-center text-slate-800"
     >
@@ -172,7 +172,7 @@ const Projects = () => {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 };
 
