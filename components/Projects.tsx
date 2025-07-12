@@ -24,7 +24,6 @@ const projects = [
     name: "TechX SYP",
     description: "Website of IEEE Computer Society SYP TechX 2024.",
     tech: ["Next.js", "Tailwind", "Typescript", "DSA"],
-    github: "https://github.com/cryskram/techxsyp",
     demo: "https://techxsyp.vercel.app/",
     image: "/projects/techxsyp.png",
   },
