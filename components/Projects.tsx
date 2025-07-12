@@ -102,7 +102,7 @@ const projects = [
     name: "Bilobe",
     description: "A simply toy programming language.",
     tech: ["Language", "C++", "CMake", "Package"],
-    github: "https://github.com/Discogen/discogen",
+    github: "https://github.com/cryskram/bilobe",
     image: "/projects/bilobe.png",
   },
 ];
