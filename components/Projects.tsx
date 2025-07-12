@@ -86,7 +86,7 @@ const projects = [
     name: "CyberSpiders",
     description: "A hackernews aggregator for a codejam.",
     tech: ["Next.js", "Tailwind", "Django", "Python", "Full Stack"],
-    github: "https://github.com/cryskram/cyberspider",
+    github: "https://github.com/CyberSpiders/cyberspider",
     demo: "https://cyberspiders.vercel.app/",
     image: "/projects/cyberspider.png",
   },
