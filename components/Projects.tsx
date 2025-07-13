@@ -28,6 +28,14 @@ const projects = [
     image: "/projects/techxsyp.png",
   },
   {
+    name: "MiniFyr",
+    description: "A simple URL Shortner website.",
+    tech: ["Next.js", "Tailwind", "MongoDB", "Prisma"],
+    github: "https://github.com/cryskram/minifyr",
+    demo: "https://minifyr.vercel.app/",
+    image: "/projects/minifyr.png",
+  },
+  {
     name: "ModelCraft",
     description:
       "A web app to train and test ML models on custom CSVs. Built with FastAPI, Next.js, and Tailwind.",
@@ -46,7 +54,14 @@ const projects = [
   {
     name: "Attendance Management",
     description: "A project built as a peer learning program instructor.",
-    tech: ["Next.js", "Tailwind", "Typescript", "MongoDB", "Full Stack"],
+    tech: [
+      "Next.js",
+      "Tailwind",
+      "Typescript",
+      "MongoDB",
+      "Full Stack",
+      "Prisma",
+    ],
     github: "https://github.com/cryskram/webdevpeersesh",
     demo: "https://webdevpeersesh.vercel.app/",
     image: "/projects/attendance.png",
@@ -54,7 +69,14 @@ const projects = [
   {
     name: "DropConnect",
     description: "A social media website.",
-    tech: ["Next.js", "Tailwind", "Typescript", "PostgreSQL", "Full Stack"],
+    tech: [
+      "Next.js",
+      "Tailwind",
+      "Typescript",
+      "PostgreSQL",
+      "Full Stack",
+      "Prisma",
+    ],
     github: "https://github.com/cryskram/dropconnect",
     demo: "https://dropconnect.vercel.app/",
     image: "/projects/dropconnect.png",
