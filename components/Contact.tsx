@@ -1,7 +1,7 @@
 "use client";
 
-import { FaGithub, FaLinkedin, FaTwitter, FaEnvelope } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa6";
+import { FaGithub, FaLinkedin, FaEnvelope } from "react-icons/fa";
+import { FaInstagram, FaXTwitter } from "react-icons/fa6";
 import { motion } from "framer-motion";
 
 const links = [
@@ -27,7 +27,7 @@ const links = [
     label: "X / Twitter",
     value: "gn_vageesh",
     href: "https://x.com/gn_vageesh",
-    icon: <FaTwitter />,
+    icon: <FaXTwitter />,
   },
   {
     label: "Email",
