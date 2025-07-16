@@ -28,6 +28,15 @@ const projects = [
     image: "/projects/techxsyp.png",
   },
   {
+    name: "SnapDrop",
+    description:
+      "A simple, autosaving note-sharing app designed for quick, login-free collaboration.",
+    tech: ["Next.js", "Tailwind", "MongoDB", "Prisma", "GraphQL"],
+    github: "https://github.com/cryskram/snapdrop",
+    demo: "https://snapdropweb.vercel.app/",
+    image: "/projects/snapdrop.png",
+  },
+  {
     name: "MiniFyr",
     description: "A simple URL Shortner website.",
     tech: ["Next.js", "Tailwind", "MongoDB", "Prisma"],

@@ -21,27 +21,27 @@ import {
   SiLinux,
   SiNixos,
   SiPython,
+  SiGraphql,
 } from "react-icons/si";
 import { TbBrandCpp } from "react-icons/tb";
 
 const stack = {
   Frontend: ["Next.js", "Tailwind CSS", "TypeScript", "Flutter"],
-  Backend: ["FastAPI", "Node.js", "Express.js", "Prisma"],
+  Backend: ["GraphQL", "Node.js(Express)", "Prisma", "FastAPI"],
   Languages: ["C++", "Java", "Python"],
   Database: ["PostgreSQL", "MongoDB"],
   Tools: ["Git", "Docker", "Figma", "Linux", "Windows", "Nix"],
 };
 
 const techIcons: Record<string, JSX.Element> = {
-  React: <SiReact className="inline mr-2" />,
   "Next.js": <SiNextdotjs className="inline mr-2" />,
   "Tailwind CSS": <SiTailwindcss className="inline mr-2" />,
   TypeScript: <SiTypescript className="inline mr-2" />,
   Flutter: <SiFlutter className="inline mr-2" />,
   FastAPI: <SiFastapi className="inline mr-2" />,
-  "Node.js": <SiNodedotjs className="inline mr-2" />,
-  "Express.js": <SiExpress className="inline mr-2" />,
+  "Node.js(Express)": <SiNodedotjs className="inline mr-2" />,
   Prisma: <SiPrisma className="inline mr-2" />,
+  GraphQL: <SiGraphql className="inline mr-2 " />,
   PostgreSQL: <SiPostgresql className="inline mr-2" />,
   MongoDB: <SiMongodb className="inline mr-2" />,
   Git: <SiGit className="inline mr-2" />,
