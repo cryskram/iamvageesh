@@ -80,18 +80,19 @@ const Landing = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
-            <a
+            <Link
               href="#projects"
               className="px-6 py-2 rounded-md bg-slate-800 text-white hover:bg-slate-700 transition"
             >
               View Projects
-            </a>
-            <a
-              href="#contact"
+            </Link>
+            <Link
+              download
+              href="/files/Resume.pdf"
               className="px-6 py-2 rounded-md border border-slate-400 text-slate-700 hover:bg-slate-200 transition"
             >
-              Contact Me
-            </a>
+              Download Resume
+            </Link>
           </motion.div>
         </motion.div>
 
