@@ -14,6 +14,24 @@ const projects = [
     image: "/projects/portfolio2.png",
   },
   {
+    name: "BuzzBoard",
+    description:
+      "A lightweight, anonymous polling platform for instant public opinion sharing.",
+    tech: ["Next.js", "Tailwind", "MongoDB", "Prisma", "GraphQL"],
+    github: "https://github.com/cryskram/buzzboard",
+    demo: "https://buzzboard.vercel.app/",
+    image: "/projects/buzzboard.png",
+  },
+  {
+    name: "SnapDrop",
+    description:
+      "A simple, autosaving note-sharing app designed for quick, login-free collaboration.",
+    tech: ["Next.js", "Tailwind", "MongoDB", "Prisma", "GraphQL"],
+    github: "https://github.com/cryskram/snapdrop",
+    demo: "https://snapdropweb.vercel.app/",
+    image: "/projects/snapdrop.png",
+  },
+  {
     name: "TechX Bangalore 2024 Website",
     description: "Website for the award winning TechX Bangalore 2024 event.",
     tech: ["Next.js", "Tailwind", "Typescript", "UI/UX"],
@@ -26,15 +44,6 @@ const projects = [
     tech: ["Next.js", "Tailwind", "Typescript", "DSA"],
     demo: "https://techxsyp.vercel.app/",
     image: "/projects/techxsyp.png",
-  },
-  {
-    name: "SnapDrop",
-    description:
-      "A simple, autosaving note-sharing app designed for quick, login-free collaboration.",
-    tech: ["Next.js", "Tailwind", "MongoDB", "Prisma", "GraphQL"],
-    github: "https://github.com/cryskram/snapdrop",
-    demo: "https://snapdropweb.vercel.app/",
-    image: "/projects/snapdrop.png",
   },
   {
     name: "MiniFyr",
