@@ -64,7 +64,7 @@ const Contact = () => {
         >
           <h2 className="text-2xl font-semibold">Let's Connect</h2>
           <p className="text-slate-600">
-            Whether it's a collaboration, opportunity, or just a friendly chat —
+            Whether it's a collaboration, opportunity, or just a friendly chat -
             my inbox is open!
           </p>
         </motion.div>
@@ -100,7 +100,7 @@ const Contact = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 + links.length * 0.1 }}
         >
-          No spam, no bots – just genuine connections
+          No spam, no bots - just genuine connections
         </motion.p>
       </motion.div>
     </div>

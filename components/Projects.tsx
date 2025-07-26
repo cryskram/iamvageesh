@@ -32,6 +32,23 @@ const projects = [
     image: "/projects/snapdrop.png",
   },
   {
+    name: "ImageSpam",
+    description:
+      "A simple image uploader with auth and multi-framework support.",
+    tech: [
+      "Next.js",
+      "Tailwind",
+      "MongoDB",
+      "Prisma",
+      "GraphQL",
+      "Firebase",
+      "FullStack",
+    ],
+    github: "https://github.com/cryskram/learnauthgraphql",
+    demo: "https://learnauthgraphql.vercel.app/",
+    image: "/projects/imagespam.png",
+  },
+  {
     name: "TechX Bangalore 2024 Website",
     description: "Website for the award winning TechX Bangalore 2024 event.",
     tech: ["Next.js", "Tailwind", "Typescript", "UI/UX"],
