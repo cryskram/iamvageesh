@@ -14,10 +14,19 @@ const projects = [
     image: "/projects/portfolio2.png",
   },
   {
+    name: "ShareSq",
+    description:
+      "A simple expense sharing application for hassle free usecase.",
+    tech: ["Next.js", "Tailwind", "MongoDB", "Prisma", "GraphQL"],
+    github: "https://github.com/cryskram/sharesq",
+    demo: "https://sharesq.vercel.app/",
+    image: "/projects/sharesq.png",
+  },
+  {
     name: "BuzzBoard",
     description:
       "A lightweight, anonymous polling platform for instant public opinion sharing.",
-    tech: ["Next.js", "Tailwind", "MongoDB", "Prisma", "GraphQL"],
+    tech: ["Next.js", "Tailwind", "MongoDB", "Prisma", "GraphQL", "FullStack"],
     github: "https://github.com/cryskram/buzzboard",
     demo: "https://buzzboard.vercel.app/",
     image: "/projects/buzzboard.png",
@@ -31,6 +40,7 @@ const projects = [
     demo: "https://snapdropweb.vercel.app/",
     image: "/projects/snapdrop.png",
   },
+
   {
     name: "ImageSpam",
     description:
