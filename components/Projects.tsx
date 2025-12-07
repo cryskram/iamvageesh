@@ -14,6 +14,15 @@ const projects = [
     image: "/projects/portfolio2.png",
   },
   {
+    name: "BMSCE IEEE CS Website",
+    description:
+      "A full-stack website of my college club, with features like event management.",
+    tech: ["Next.js", "Tailwind", "MongoDB", "Prisma", "GraphQL"],
+    github: "https://github.com/BMSCE-IEEE-CS/bmsceieeecs",
+    demo: "https://www.bmsceieeecs.in/",
+    image: "/projects/bmsceieeecs.png",
+  },
+  {
     name: "ShareSq",
     description:
       "A simple expense sharing application for hassle free usecase.",
