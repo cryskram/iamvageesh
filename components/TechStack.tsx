@@ -22,15 +22,16 @@ import {
   SiNixos,
   SiPython,
   SiGraphql,
+  SiCloudinary,
 } from "react-icons/si";
 import { TbBrandCpp } from "react-icons/tb";
 
 const stack = {
-  Frontend: ["Next.js", "Tailwind CSS", "TypeScript", "Flutter"],
+  Frontend: ["Next.js", "Tailwind CSS", "Flutter"],
   Backend: ["GraphQL", "Node.js(Express)", "Prisma", "FastAPI"],
-  Languages: ["C++", "Java", "Python"],
+  Languages: ["C++", "Java", "Python", "TypeScript"],
   Database: ["PostgreSQL", "MongoDB"],
-  Tools: ["Git", "Docker", "Figma", "Linux", "Windows", "Nix"],
+  Tools: ["Git", "Docker", "Figma", "Linux", "Nix", "Cloudinary"],
 };
 
 const techIcons: Record<string, JSX.Element> = {
@@ -48,11 +49,11 @@ const techIcons: Record<string, JSX.Element> = {
   Docker: <SiDocker className="inline mr-2" />,
   Figma: <SiFigma className="inline mr-2" />,
   Linux: <SiLinux className="inline mr-2" />,
-  Windows: <FaWindows className="inline mr-2" />,
   Nix: <SiNixos className="inline mr-2" />,
   "C++": <TbBrandCpp className="inline mr-2" />,
   Java: <FaJava className="inline mr-2" />,
   Python: <SiPython className="inline mr-2" />,
+  Cloudinary: <SiCloudinary className="inline mr-2" />,
 };
 
 const TechStack = () => {

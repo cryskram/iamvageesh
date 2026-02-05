@@ -8,10 +8,27 @@ const projects = [
   {
     name: "Personal Portfolio v2",
     description: "Second version(current) of my personal portfolio website.",
-    tech: ["Next.js", "Tailwind", "UI/UX"],
+    tech: ["Next.js", "Tailwind", "Typescript"],
     github: "https://github.com/cryskram/iamvageesh",
     demo: "https://iamvageesh.vercel.app/",
     image: "/projects/portfolio2.png",
+  },
+  {
+    name: "Circulet",
+    description:
+      "A campus-first marketplace where students can buy, sell, or rent pre-owned items responsibly.",
+    tech: [
+      "Next.js",
+      "Tailwind",
+      "MongoDB",
+      "Prisma",
+      "GraphQL",
+      "FullStack",
+      "Cloudinary",
+    ],
+    github: "https://github.com/cryskram/circulet",
+    demo: "https://circulet.vercel.app/",
+    image: "/projects/circulet.png",
   },
   {
     name: "BMSCE IEEE CS Website",
@@ -70,7 +87,7 @@ const projects = [
   {
     name: "TechX Bangalore 2024 Website",
     description: "Website for the award winning TechX Bangalore 2024 event.",
-    tech: ["Next.js", "Tailwind", "Typescript", "UI/UX"],
+    tech: ["Next.js", "Tailwind", "Typescript"],
     demo: "https://techx-website-new.vercel.app/",
     image: "/projects/techx.png",
   },
@@ -145,7 +162,7 @@ const projects = [
   {
     name: "Portfolio Website v1",
     description: "First version of personal portfolio website.",
-    tech: ["Next.js", "Tailwind", "UI/UX"],
+    tech: ["Next.js", "Tailwind", "Typescript"],
     github: "https://github.com/cryskram/portfolio",
     demo: "https://iamvageesh1.vercel.app/",
     image: "/projects/portfolio.png",
@@ -153,7 +170,7 @@ const projects = [
   {
     name: "Quizo",
     description: "A simple quiz platform.",
-    tech: ["Next.js", "Tailwind", "UI/UX"],
+    tech: ["Next.js", "Tailwind"],
     github: "https://github.com/cryskram/quizo",
     demo: "https://quizo-puce.vercel.app/",
     image: "/projects/quizo.png",
