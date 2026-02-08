@@ -123,21 +123,6 @@ const projects = [
     image: "/projects/asv.png",
   },
   {
-    name: "Attendance Management",
-    description: "A project built as a peer learning program instructor.",
-    tech: [
-      "Next.js",
-      "Tailwind",
-      "Typescript",
-      "MongoDB",
-      "Full Stack",
-      "Prisma",
-    ],
-    github: "https://github.com/cryskram/webdevpeersesh",
-    demo: "https://webdevpeersesh.vercel.app/",
-    image: "/projects/attendance.png",
-  },
-  {
     name: "DropConnect",
     description: "A social media website.",
     tech: [
@@ -166,14 +151,6 @@ const projects = [
     github: "https://github.com/cryskram/portfolio",
     demo: "https://iamvageesh1.vercel.app/",
     image: "/projects/portfolio.png",
-  },
-  {
-    name: "Quizo",
-    description: "A simple quiz platform.",
-    tech: ["Next.js", "Tailwind"],
-    github: "https://github.com/cryskram/quizo",
-    demo: "https://quizo-puce.vercel.app/",
-    image: "/projects/quizo.png",
   },
   {
     name: "CyberSpiders",
