@@ -108,8 +108,7 @@ const projects = [
   },
   {
     name: "ModelCraft",
-    description:
-      "A web app to train and test ML models on custom CSVs. Built with FastAPI, Next.js, and Tailwind.",
+    description: "A web app to train and test ML models on custom CSVs.",
     tech: ["FastAPI", "Next.js", "Tailwind", "Python"],
     github: "https://github.com/cryskram/algopred",
     image: "/projects/modelcraft.png",
