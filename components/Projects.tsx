@@ -92,13 +92,6 @@ const projects = [
     image: "/projects/techx.png",
   },
   {
-    name: "TechX SYP",
-    description: "Website of IEEE Computer Society SYP TechX 2024.",
-    tech: ["Next.js", "Tailwind", "Typescript", "DSA"],
-    demo: "https://techxsyp.vercel.app/",
-    image: "/projects/techxsyp.png",
-  },
-  {
     name: "MiniFyr",
     description: "A simple URL Shortner website.",
     tech: ["Next.js", "Tailwind", "MongoDB", "Prisma"],
