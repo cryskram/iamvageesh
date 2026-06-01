@@ -46,10 +46,10 @@ const Contact = () => {
   return (
     <div
       id="contact"
-      className="w-full py-24 px-6 flex justify-center bg-gradient-to-b from-transparent to-slate-900 text-slate-800"
+      className="flex w-full justify-center bg-gradient-to-b from-transparent to-slate-900 px-6 py-24 text-slate-800"
     >
       <motion.div
-        className="max-w-2xl w-full bg-white border border-slate-300 rounded-2xl shadow-md p-8 space-y-8 text-center"
+        className="w-full max-w-2xl space-y-8 rounded-2xl border border-slate-300 bg-white p-8 text-center shadow-md"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true, amount: 0.2 }}
@@ -70,7 +70,7 @@ const Contact = () => {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-1 sm:grid-cols-2 gap-4"
+          className="grid grid-cols-1 gap-4 sm:grid-cols-2"
           initial="initial"
           whileInView="animate"
           viewport={{ once: true, amount: 0.2 }}
@@ -81,7 +81,7 @@ const Contact = () => {
               href={link.href}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-3 px-4 py-3 rounded-lg border border-slate-200 hover:bg-slate-100 transition"
+              className="flex items-center gap-3 rounded-lg border border-slate-200 px-4 py-3 transition hover:bg-slate-100"
               variants={fadeUp}
               transition={{ delay: 0.3 + i * 0.1 }}
             >
@@ -95,7 +95,7 @@ const Contact = () => {
         </motion.div>
 
         <motion.p
-          className="text-xs text-slate-400 mt-6"
+          className="mt-6 text-xs text-slate-400"
           initial={{ opacity: 0, y: 10 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.3 + links.length * 0.1 }}

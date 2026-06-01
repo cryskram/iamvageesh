@@ -35,30 +35,30 @@ const stack = {
 };
 
 const techIcons: Record<string, JSX.Element> = {
-  "Next.js": <SiNextdotjs className="inline mr-2" />,
-  "Tailwind CSS": <SiTailwindcss className="inline mr-2" />,
-  TypeScript: <SiTypescript className="inline mr-2" />,
-  Flutter: <SiFlutter className="inline mr-2" />,
-  FastAPI: <SiFastapi className="inline mr-2" />,
-  "Node.js(Express)": <SiNodedotjs className="inline mr-2" />,
-  Prisma: <SiPrisma className="inline mr-2" />,
-  GraphQL: <SiGraphql className="inline mr-2 " />,
-  PostgreSQL: <SiPostgresql className="inline mr-2" />,
-  MongoDB: <SiMongodb className="inline mr-2" />,
-  Git: <SiGit className="inline mr-2" />,
-  Docker: <SiDocker className="inline mr-2" />,
-  Figma: <SiFigma className="inline mr-2" />,
-  Linux: <SiLinux className="inline mr-2" />,
-  Nix: <SiNixos className="inline mr-2" />,
-  "C++": <TbBrandCpp className="inline mr-2" />,
-  Java: <FaJava className="inline mr-2" />,
-  Python: <SiPython className="inline mr-2" />,
-  Cloudinary: <SiCloudinary className="inline mr-2" />,
+  "Next.js": <SiNextdotjs className="mr-2 inline" />,
+  "Tailwind CSS": <SiTailwindcss className="mr-2 inline" />,
+  TypeScript: <SiTypescript className="mr-2 inline" />,
+  Flutter: <SiFlutter className="mr-2 inline" />,
+  FastAPI: <SiFastapi className="mr-2 inline" />,
+  "Node.js(Express)": <SiNodedotjs className="mr-2 inline" />,
+  Prisma: <SiPrisma className="mr-2 inline" />,
+  GraphQL: <SiGraphql className="mr-2 inline" />,
+  PostgreSQL: <SiPostgresql className="mr-2 inline" />,
+  MongoDB: <SiMongodb className="mr-2 inline" />,
+  Git: <SiGit className="mr-2 inline" />,
+  Docker: <SiDocker className="mr-2 inline" />,
+  Figma: <SiFigma className="mr-2 inline" />,
+  Linux: <SiLinux className="mr-2 inline" />,
+  Nix: <SiNixos className="mr-2 inline" />,
+  "C++": <TbBrandCpp className="mr-2 inline" />,
+  Java: <FaJava className="mr-2 inline" />,
+  Python: <SiPython className="mr-2 inline" />,
+  Cloudinary: <SiCloudinary className="mr-2 inline" />,
 };
 
 const TechStack = () => {
   return (
-    <div className="space-y-8 w-full">
+    <div className="w-full space-y-8">
       {Object.entries(stack).map(([category, tools], index) => (
         <motion.div
           key={category}
@@ -68,14 +68,14 @@ const TechStack = () => {
           viewport={{ once: true }}
           className="space-y-3"
         >
-          <h4 className="text-base font-semibold text-slate-700 tracking-wide">
+          <h4 className="text-base font-semibold tracking-wide text-slate-700">
             {category}
           </h4>
           <div className="flex flex-wrap gap-3">
             {tools.map((tech) => (
               <span
                 key={tech}
-                className="px-4 py-2 rounded-full text-sm font-mono bg-slate-900 text-slate-100 flex items-center"
+                className="flex items-center rounded-full bg-slate-900 px-4 py-2 font-mono text-sm text-slate-100"
               >
                 {techIcons[tech]} {tech}
               </span>

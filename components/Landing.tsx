@@ -4,6 +4,9 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import { FaArrowCircleDown } from "react-icons/fa";
 import { motion } from "framer-motion";
+import VageeshOS from "./VageeshOS/VageeshOS";
+
+type TerminalState = "booting" | "ready" | "expanded";
 
 const terminalLines = [
   "booting developer profile...",
@@ -20,6 +23,8 @@ const Landing = () => {
   const [currentCharIndex, setCurrentCharIndex] = useState(0);
   const [currentText, setCurrentText] = useState("");
   const [isTyping, setIsTyping] = useState(true);
+
+  const [terminalState, setTerminalState] = useState<TerminalState>("booting");
 
   useEffect(() => {
     if (currentLineIndex >= terminalLines.length || !isTyping) return;
@@ -52,44 +57,44 @@ const Landing = () => {
   return (
     <div
       id="landing"
-      className="min-h-screen w-full bg-slate-200 flex flex-col justify-center items-center px-6 py-16"
+      className="flex min-h-screen w-full flex-col items-center justify-center bg-slate-200 px-6 py-16"
     >
-      <div className="max-w-6xl w-full grid md:grid-cols-2 gap-12 items-center">
+      <div className="grid w-full max-w-6xl items-center gap-12 md:grid-cols-2">
         <motion.div
-          className="relative pl-6 border-l-4 border-slate-300"
+          className="relative border-l-4 border-slate-300 pl-6"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <p className="text-sm uppercase tracking-wide text-slate-600">
+          <p className="text-sm tracking-wide text-slate-600 uppercase">
             Developer. Problem Solver. Builder.
           </p>
 
-          <h1 className="text-4xl md:text-5xl font-bold text-slate-800 leading-tight mt-2">
+          <h1 className="mt-2 text-4xl leading-tight font-bold text-slate-800 md:text-5xl">
             Hey, I'm <span className="text-slate-500">Vageesh</span>
           </h1>
 
-          <p className="text-slate-600 text-base md:text-lg mt-4">
+          <p className="mt-4 text-base text-slate-600 md:text-lg">
             Designing smooth interfaces and engineering robust logic — with
             precision and care.
           </p>
 
           <motion.div
-            className="flex gap-4 mt-6"
+            className="mt-6 flex gap-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.4 }}
           >
             <Link
               href="#projects"
-              className="px-6 py-2 rounded-md bg-slate-800 text-white hover:bg-slate-700 transition"
+              className="rounded-md bg-slate-800 px-6 py-2 text-white transition hover:bg-slate-700"
             >
               View Projects
             </Link>
             <Link
               download
               href="/files/Resume.pdf"
-              className="px-6 py-2 rounded-md border border-slate-400 text-slate-700 hover:bg-slate-200 transition"
+              className="rounded-md border border-slate-400 px-6 py-2 text-slate-700 transition hover:bg-slate-200"
             >
               Download Resume
             </Link>
@@ -97,29 +102,11 @@ const Landing = () => {
         </motion.div>
 
         <motion.div
-          className="bg-slate-900 rounded-lg p-6 shadow-2xl text-sm text-slate-700"
           initial={{ opacity: 0, x: 60 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
         >
-          <div className="mb-2 text-slate-400 flex items-center gap-2">
-            <span className="w-3 h-3 rounded-full bg-red-500" />
-            <span className="w-3 h-3 rounded-full bg-yellow-400" />
-            <span className="w-3 h-3 rounded-full bg-green-500" />
-            <span className="ml-2">// Terminal</span>
-          </div>
-
-          <div className="bg-slate-800 text-slate-200 p-4 rounded-md min-h-[140px] whitespace-pre-wrap font-mono">
-            {lines.map((line, idx) => (
-              <div key={idx}>{line}</div>
-            ))}
-            {currentLineIndex < terminalLines.length && (
-              <div>
-                {currentText}
-                <span className="animate-pulse text-slate-200">|</span>
-              </div>
-            )}
-          </div>
+          <VageeshOS />
         </motion.div>
       </div>
 
@@ -131,7 +118,7 @@ const Landing = () => {
       >
         <Link
           href="#about"
-          className="text-slate-500 inline-flex items-center gap-1 hover:text-slate-700 transition-all duration-150"
+          className="inline-flex items-center gap-1 text-slate-500 transition-all duration-150 hover:text-slate-700"
         >
           <FaArrowCircleDown /> scroll to about
         </Link>

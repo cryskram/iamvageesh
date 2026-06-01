@@ -7,10 +7,10 @@ const About = () => {
   return (
     <div
       id="about"
-      className="text-slate-800 w-full py-10 px-6 flex flex-col justify-center"
+      className="flex w-full flex-col justify-center px-6 py-10 text-slate-800"
     >
       <motion.h2
-        className="text-3xl md:text-4xl font-semibold text-center"
+        className="text-center text-3xl font-semibold md:text-4xl"
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6 }}
@@ -19,9 +19,9 @@ const About = () => {
         About Me
       </motion.h2>
 
-      <div className="flex justify-center mt-8">
+      <div className="mt-8 flex justify-center">
         <motion.div
-          className="max-w-6xl w-full flex flex-col lg:flex-row gap-12 items-center justify-center"
+          className="flex w-full max-w-6xl flex-col items-center justify-center gap-12 lg:flex-row"
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           transition={{ duration: 0.6, delay: 0.2 }}
@@ -34,9 +34,9 @@ const About = () => {
             transition={{ duration: 0.6, delay: 0.3 }}
             viewport={{ once: true }}
           >
-            <div className="bg-slate-100 border border-slate-300 rounded-xl p-6 shadow-sm text-sm">
-              <p className="text-slate-400 mb-4">// about.ts</p>
-              <pre className="text-slate-600 whitespace-pre-wrap break-words">
+            <div className="rounded-xl border border-slate-300 bg-slate-100 p-6 text-sm shadow-sm">
+              <p className="mb-4 text-slate-400">// about.ts</p>
+              <pre className="break-words whitespace-pre-wrap text-slate-600">
                 {`/**
  * Hey there! I'm Vageesh — a full-stack developer who loves
  * building beautiful frontends and powerful backends.

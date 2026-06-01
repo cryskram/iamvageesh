@@ -178,16 +178,16 @@ const Projects = () => {
   return (
     <div
       id="projects"
-      className="w-full py-20 px-6 flex justify-center text-slate-800"
+      className="flex w-full justify-center px-6 py-20 text-slate-800"
     >
       <motion.div
-        className="max-w-6xl w-full space-y-12"
+        className="w-full max-w-6xl space-y-12"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true, amount: 0.2 }}
       >
         <motion.h2
-          className="text-3xl md:text-4xl font-semibold text-center"
+          className="text-center text-3xl font-semibold md:text-4xl"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
@@ -205,7 +205,7 @@ const Projects = () => {
               whileInView="animate"
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="bg-white border border-slate-200 rounded-xl shadow-xl overflow-hidden flex flex-col"
+              className="flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-xl"
             >
               {project.image && (
                 <Image
@@ -213,11 +213,11 @@ const Projects = () => {
                   alt={project.name}
                   width={500}
                   height={500}
-                  className="w-full md:h-52 object-cover object-top border-b border-slate-200"
+                  className="w-full border-b border-slate-200 object-cover object-top md:h-52"
                 />
               )}
 
-              <div className="p-6 space-y-4 flex flex-col h-full">
+              <div className="flex h-full flex-col space-y-4 p-6">
                 <div className="flex items-center justify-between">
                   <h3 className="text-xl font-semibold">{project.name}</h3>
                   <div className="flex gap-3">
@@ -244,11 +244,11 @@ const Projects = () => {
                   </div>
                 </div>
                 <p className="text-sm">{project.description}</p>
-                <div className="flex flex-wrap gap-2 mt-auto">
+                <div className="mt-auto flex flex-wrap gap-2">
                   {project.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="bg-slate-900 text-slate-100 text-sm px-3 py-1 rounded-full"
+                      className="rounded-full bg-slate-900 px-3 py-1 text-sm text-slate-100"
                     >
                       {tech}
                     </span>

@@ -1,1 +1,16 @@
 @import "tailwindcss";
+
+.terminal-scrollbar::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.terminal-scrollbar {
+  scrollbar-width: none;
+}
+
+.terminal-glow {
+  box-shadow:
+    0 0 0 1px rgba(71, 85, 105, 0.3),
+    0 0 30px rgba(15, 23, 42, 0.2);
+}

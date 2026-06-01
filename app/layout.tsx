@@ -52,7 +52,7 @@ export default function RootLayout({
   return (
     <html className="scroll-smooth" lang="en">
       <body
-        className={`${mainFont.className} antialiased bg-slate-200 text-slate-900`}
+        className={`${mainFont.className} bg-slate-200 text-slate-900 antialiased`}
       >
         {children}
         <Footer />
