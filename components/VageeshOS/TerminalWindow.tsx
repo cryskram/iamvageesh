@@ -7,6 +7,7 @@ interface TerminalWindowProps {
   command: string;
   setCommand: (value: string) => void;
   handleCommand: (e: React.FormEvent) => void;
+  handleKeyDown: (e: React.KeyboardEvent) => void;
   minimize: () => void;
 }
 
@@ -15,6 +16,7 @@ export default function TerminalWindow({
   command,
   setCommand,
   handleCommand,
+  handleKeyDown,
   minimize,
 }: TerminalWindowProps) {
   const terminalRef = useRef<HTMLDivElement>(null);
@@ -77,8 +79,10 @@ export default function TerminalWindow({
           <input
             value={command}
             onChange={(e) => setCommand(e.target.value)}
+            onKeyDown={handleKeyDown}
             autoFocus
             placeholder="type a command..."
+            aria-label="Terminal command input"
             className="flex-1 bg-transparent text-slate-200 outline-none placeholder:text-slate-600"
           />
         </form>

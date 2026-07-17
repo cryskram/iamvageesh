@@ -2,172 +2,8 @@
 
 import Image from "next/image";
 import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
-import { motion } from "framer-motion";
-
-const projects = [
-  {
-    name: "Personal Portfolio v2",
-    description: "Second version(current) of my personal portfolio website.",
-    tech: ["Next.js", "Tailwind", "Typescript"],
-    github: "https://github.com/cryskram/iamvageesh",
-    demo: "https://iamvageesh.vercel.app/",
-    image: "/projects/portfolio2.png",
-  },
-  {
-    name: "Circulet",
-    description:
-      "A campus-first marketplace where students can buy, sell, or rent pre-owned items responsibly.",
-    tech: [
-      "Next.js",
-      "Tailwind",
-      "MongoDB",
-      "Prisma",
-      "GraphQL",
-      "FullStack",
-      "Cloudinary",
-    ],
-    github: "https://github.com/cryskram/circulet",
-    demo: "https://circulet.vercel.app/",
-    image: "/projects/circulet.png",
-  },
-  {
-    name: "BMSCE IEEE CS Website",
-    description:
-      "A full-stack website of my college club, with features like event management.",
-    tech: ["Next.js", "Tailwind", "MongoDB", "Prisma", "GraphQL"],
-    github: "https://github.com/BMSCE-IEEE-CS/bmsceieeecs",
-    demo: "https://www.bmsceieeecs.in/",
-    image: "/projects/bmsceieeecs.png",
-  },
-  {
-    name: "ShareSq",
-    description:
-      "A simple expense sharing application for hassle free usecase.",
-    tech: ["Next.js", "Tailwind", "MongoDB", "Prisma", "GraphQL"],
-    github: "https://github.com/cryskram/sharesq",
-    demo: "https://sharesq.vercel.app/",
-    image: "/projects/sharesq.png",
-  },
-  {
-    name: "BuzzBoard",
-    description:
-      "A lightweight, anonymous polling platform for instant public opinion sharing.",
-    tech: ["Next.js", "Tailwind", "MongoDB", "Prisma", "GraphQL", "FullStack"],
-    github: "https://github.com/cryskram/buzzboard",
-    demo: "https://buzzboard.vercel.app/",
-    image: "/projects/buzzboard.png",
-  },
-  {
-    name: "SnapDrop",
-    description:
-      "A simple, autosaving note-sharing app designed for quick, login-free collaboration.",
-    tech: ["Next.js", "Tailwind", "MongoDB", "Prisma", "GraphQL"],
-    github: "https://github.com/cryskram/snapdrop",
-    demo: "https://snapdropweb.vercel.app/",
-    image: "/projects/snapdrop.png",
-  },
-
-  {
-    name: "ImageSpam",
-    description:
-      "A simple image uploader with auth and multi-framework support.",
-    tech: [
-      "Next.js",
-      "Tailwind",
-      "MongoDB",
-      "Prisma",
-      "GraphQL",
-      "Firebase",
-      "FullStack",
-    ],
-    github: "https://github.com/cryskram/learnauthgraphql",
-    demo: "https://learnauthgraphql.vercel.app/",
-    image: "/projects/imagespam.png",
-  },
-  {
-    name: "TechX Bangalore 2024 Website",
-    description: "Website for the award winning TechX Bangalore 2024 event.",
-    tech: ["Next.js", "Tailwind", "Typescript"],
-    demo: "https://techx-website-new.vercel.app/",
-    image: "/projects/techx.png",
-  },
-  {
-    name: "MiniFyr",
-    description: "A simple URL Shortner website.",
-    tech: ["Next.js", "Tailwind", "MongoDB", "Prisma"],
-    github: "https://github.com/cryskram/minifyr",
-    demo: "https://minifyr.vercel.app/",
-    image: "/projects/minifyr.png",
-  },
-  {
-    name: "ModelCraft",
-    description: "A web app to train and test ML models on custom CSVs.",
-    tech: ["FastAPI", "Next.js", "Tailwind", "Python"],
-    github: "https://github.com/cryskram/algopred",
-    image: "/projects/modelcraft.png",
-  },
-  {
-    name: "Algorithms Sorting Visualizer",
-    description: "Visualize different sorting design techniques in DSA.",
-    tech: ["Next.js", "Tailwind", "Typescript", "DSA"],
-    github: "https://github.com/cryskram/sortingalgo",
-    demo: "https://sortingalgo.vercel.app/",
-    image: "/projects/asv.png",
-  },
-  {
-    name: "DropConnect",
-    description: "A social media website.",
-    tech: [
-      "Next.js",
-      "Tailwind",
-      "Typescript",
-      "PostgreSQL",
-      "Full Stack",
-      "Prisma",
-    ],
-    github: "https://github.com/cryskram/dropconnect",
-    demo: "https://dropconnect.vercel.app/",
-    image: "/projects/dropconnect.png",
-  },
-  {
-    name: "Nrittam",
-    description: "AI Powered Clasical Dance Buddy(frontend).",
-    tech: ["Flutter", "Frontend"],
-    github: "https://github.com/cryskram/nrittam",
-    image: "/projects/nrittam.jpeg",
-  },
-  {
-    name: "Portfolio Website v1",
-    description: "First version of personal portfolio website.",
-    tech: ["Next.js", "Tailwind", "Typescript"],
-    github: "https://github.com/cryskram/portfolio",
-    demo: "https://iamvageesh1.vercel.app/",
-    image: "/projects/portfolio.png",
-  },
-  {
-    name: "CyberSpiders",
-    description: "A hackernews aggregator for a codejam.",
-    tech: ["Next.js", "Tailwind", "Django", "Python", "Full Stack"],
-    github: "https://github.com/CyberSpiders/cyberspider",
-    demo: "https://cyberspiders.vercel.app/",
-    image: "/projects/cyberspider.png",
-  },
-  {
-    name: "DiscoGen",
-    description: "A Discord bot generator with a few prompts.",
-    tech: ["Javascript", "Discord Bot", "Package", "NPM"],
-    github: "https://github.com/Discogen/discogen",
-    demo: "https://www.npmjs.com/package/discogen",
-    image: "/projects/discogenImg.png",
-  },
-  {
-    name: "Bilobe",
-    description: "A simply toy programming language.",
-    tech: ["Language", "C++", "CMake", "Package"],
-    github: "https://github.com/cryskram/bilobe",
-    image: "/projects/bilobe.png",
-  },
-];
+import { motion, useReducedMotion } from "framer-motion";
+import { projects } from "@/data/projects";
 
 const fadeUp = {
   initial: { opacity: 0, y: 30 },
@@ -175,10 +11,13 @@ const fadeUp = {
 };
 
 const Projects = () => {
+  const prefersReducedMotion = useReducedMotion();
+  const fast = prefersReducedMotion ? { duration: 0, delay: 0 } : {};
+
   return (
     <div
       id="projects"
-      className="flex w-full justify-center px-6 py-20 text-slate-800"
+      className="flex w-full justify-center px-6 py-20 text-slate-800 dark:text-slate-200"
     >
       <motion.div
         className="w-full max-w-6xl space-y-12"
@@ -199,13 +38,13 @@ const Projects = () => {
         <div className="grid gap-8 md:grid-cols-3">
           {projects.map((project, idx) => (
             <motion.div
-              key={idx}
+              key={project.name}
               variants={fadeUp}
               initial="initial"
               whileInView="animate"
               viewport={{ once: true }}
-              transition={{ duration: 0.5, delay: idx * 0.1 }}
-              className="flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-xl"
+              transition={{ duration: 0.5, delay: idx * 0.1, ...fast }}
+              className="flex flex-col overflow-hidden rounded-xl border border-slate-200 bg-white shadow-xl dark:border-slate-700 dark:bg-slate-900"
             >
               {project.image && (
                 <Image
@@ -213,7 +52,8 @@ const Projects = () => {
                   alt={project.name}
                   width={500}
                   height={500}
-                  className="w-full border-b border-slate-200 object-cover object-top md:h-52"
+                  className="w-full border-b border-slate-200 object-cover object-top md:h-52 dark:border-slate-700"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
               )}
 
@@ -226,7 +66,8 @@ const Projects = () => {
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-slate-500 hover:text-slate-800"
+                        className="text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200"
+                        aria-label={`View ${project.name} on GitHub`}
                       >
                         <FaGithub />
                       </a>
@@ -236,19 +77,20 @@ const Projects = () => {
                         href={project.demo}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-slate-500 hover:text-slate-800"
+                        className="text-slate-500 hover:text-slate-800 dark:text-slate-400 dark:hover:text-slate-200"
+                        aria-label={`View ${project.name} live demo`}
                       >
                         <FaExternalLinkAlt />
                       </a>
                     )}
                   </div>
                 </div>
-                <p className="text-sm">{project.description}</p>
+                <p className="text-sm text-slate-600 dark:text-slate-400">{project.description}</p>
                 <div className="mt-auto flex flex-wrap gap-2">
                   {project.tech.map((tech, i) => (
                     <span
                       key={i}
-                      className="rounded-full bg-slate-900 px-3 py-1 text-sm text-slate-100"
+                      className="rounded-full bg-slate-900 px-3 py-1 text-sm text-slate-100 dark:bg-slate-700"
                     >
                       {tech}
                     </span>

@@ -21,7 +21,7 @@ export default function RotatingPrompt() {
   }, []);
 
   return (
-    <div className="mt-4 text-blue-400">
+    <div className="mt-4 text-blue-400" aria-live="polite">
       &gt; {prompts[index]}
       <span className="animate-pulse">|</span>
     </div>

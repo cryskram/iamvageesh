@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@variant dark (&:where(.dark, .dark *));
+
 .terminal-scrollbar::-webkit-scrollbar {
   width: 0;
   height: 0;
@@ -13,4 +15,10 @@
   box-shadow:
     0 0 0 1px rgba(71, 85, 105, 0.3),
     0 0 30px rgba(15, 23, 42, 0.2);
+}
+
+.dark .terminal-glow {
+  box-shadow:
+    0 0 0 1px rgba(148, 163, 184, 0.2),
+    0 0 30px rgba(56, 189, 248, 0.1);
 }

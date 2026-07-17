@@ -1,7 +1,14 @@
+import dynamic from "next/dynamic";
 import About from "@/components/About";
 import Contact from "@/components/Contact";
-import Landing from "@/components/Landing";
-import Projects from "@/components/Projects";
+
+const Landing = dynamic(() => import("@/components/Landing"), {
+  ssr: true,
+});
+
+const Projects = dynamic(() => import("@/components/Projects"), {
+  ssr: true,
+});
 
 export default function Home() {
   return (

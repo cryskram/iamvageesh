@@ -1,7 +1,7 @@
 "use client";
 
 import { JSX } from "react";
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { FaJava, FaWindows } from "react-icons/fa6";
 import {
   SiReact,
@@ -57,6 +57,9 @@ const techIcons: Record<string, JSX.Element> = {
 };
 
 const TechStack = () => {
+  const prefersReducedMotion = useReducedMotion();
+  const fast = prefersReducedMotion ? { duration: 0, delay: 0 } : {};
+
   return (
     <div className="w-full space-y-8">
       {Object.entries(stack).map(([category, tools], index) => (
@@ -64,18 +67,18 @@ const TechStack = () => {
           key={category}
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: index * 0.1 }}
+          transition={{ duration: 0.5, delay: index * 0.1, ...fast }}
           viewport={{ once: true }}
           className="space-y-3"
         >
-          <h4 className="text-base font-semibold tracking-wide text-slate-700">
+          <h4 className="text-base font-semibold tracking-wide text-slate-700 dark:text-slate-300">
             {category}
           </h4>
           <div className="flex flex-wrap gap-3">
             {tools.map((tech) => (
               <span
                 key={tech}
-                className="flex items-center rounded-full bg-slate-900 px-4 py-2 font-mono text-sm text-slate-100"
+                className="flex items-center rounded-full bg-slate-900 px-4 py-2 font-mono text-sm text-slate-100 dark:bg-slate-700"
               >
                 {techIcons[tech]} {tech}
               </span>
